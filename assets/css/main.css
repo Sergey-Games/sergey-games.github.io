@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	margin:0;
+}
+
+.showcase {
+	background-color: #000;
+	height: 100%;
+}
+.showcase::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	box-shadow: inset 0 0 500px #000;
+}
+.showcase::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../img/light.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center -65px;
+	animation: showcase-light 3s ease-in-out infinite;
+}
+
+.footer-mouse {
+    color: white;
+    font-family: "8-bit Operator Mono", sans-serif;
+	overflow: hidden;
+	z-index: 2;
+	opacity: 0.5;
+}
+
+div.bottom-credits{
+	position: fixed;
+	text-align: center;
+	font-size: 12px;
+	line-height: 15px;
+	height: 35px;
+	bottom: 0;
+	left: calc(50% - 210px);
+	width: 420px;
+	padding: 8px 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+div.bottom-credits span{
+	display: inline-block;
+}
+
+div.bottom-credits:hover{
+	height: 80px;
+}
+
+span {
+	color: #fff;
+}
+
+@keyframes showcase-light {
+	0% {
+		opacity: 0.15;
+	}
+	50% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 0.15;
+	}
+}
