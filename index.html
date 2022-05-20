@@ -8,7 +8,28 @@
 		<link rel="stylesheet" href="src/css/media.css">
 	</head>
 	<body>
+		<div class="wcm">
+
+			<form class="radio-navigation"> 
+				<li class="radio-item">
+					<label>
+						<div class="radio-check"></div>
+						<input class="radio-btn" type="radio" id="roadRadio" name="radioStantion" data-radio-stantion="http://pool.anison.fm:9000/AniSonFM(320)">
+					</label>
+				</li>
+		 </form> 
+
+		 <div class="volume"> 
+			<input type="range" class="radio-volume" min="0" max="100" step="1" value="100" style="width: 40px; position: absolute; left: 5px;">
+		</div>
+
+			<button class="radio-stop"></button>
+
+		</div>
 		<div class="showcase"></div>
+
+				
+
 		<div class="footer-mouse bottom-credits">
 			<p>
 				<span>Mouseover for more info |</span>
@@ -18,4 +39,5 @@
 			</p>
 		</div>
 	</body>
+	<script src="assets/js/index.js" type="module"></script>
 </html>
